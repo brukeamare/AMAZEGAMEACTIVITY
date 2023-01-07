@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#B12F2F"
+    android:name="PlayAnimationActivity"
+    android:parentActivityName="AMazeActivity"
+    android:id="@+id/stateplayinganimationactivity"
+        >
+
+
+    <ImageView
+        android:id="@+id/imageplaying"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+
+        android:scaleX="1.5"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_ecbee7d86441d0d3464780009237875" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="77dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="zoomin"
+        android:tint="#8FFFEB3B"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showwallplayiongtext"
+        app:srcCompat="@android:drawable/btn_plus"
+        tools:ignore="UseAppTint" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="77dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="zoomout"
+        android:tint="#88FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showsolutiontextplaying"
+        app:srcCompat="@android:drawable/btn_minus"
+        tools:ignore="UseAppTint" />
+
+    <ProgressBar
+        android:id="@+id/progressbarenergyanimation"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="283dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="28dp"
+        android:max="3500"
+        android:progress="3500"
+        android:progressTint="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/leftsensor"
+        android:layout_width="57dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="52dp"
+        android:background="#00FF0A"
+        app:layout_constraintBottom_toTopOf="@+id/remainingenergytext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="?android:attr/alertDialogIcon" />
+
+    <ImageView
+        android:id="@+id/rightsensor"
+        android:layout_width="57dp"
+        android:layout_height="56dp"
+        android:background="#00FF0A"
+        app:layout_constraintBottom_toTopOf="@+id/remainingenergytext"
+        app:layout_constraintEnd_toStartOf="@+id/backsensor"
+        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintStart_toEndOf="@+id/leftsensor"
+        app:srcCompat="?android:attr/alertDialogIcon" />
+
+    <ImageView
+        android:id="@+id/backsensor"
+        android:layout_width="57dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="40dp"
+        android:background="#02FF0C"
+        app:layout_constraintBottom_toTopOf="@+id/remainingenergytext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="?android:attr/alertDialogIcon" />
+
+    <Button
+        android:id="@+id/Go2thewinning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Go2Winning"
+        android:text="Go2Winning"
+        android:visibility="invisible"
+        app:iconTint="#03A9F4"
+        app:layout_constraintEnd_toStartOf="@+id/Go2losing"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+
+    <Button
+        android:id="@+id/Go2losing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:onClick="Go2Losing"
+        android:text="Go2Losing"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/showsolutiontextplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Show Solution"
+        android:textColor="#FFEB3B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showsolutionplaying" />
+
+    <TextView
+        android:id="@+id/showwallplayiongtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Show walls"
+        android:textColor="#FFEB3B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showwallsplaying" />
+
+    <TextView
+        android:id="@+id/remainingenergytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Remaining Energy: 2459"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/progressbarenergyanimation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/showwallsplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:checked="true"
+        android:onClick="showwall"
+        android:text="ToggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/showmazeplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="56dp"
+        android:checked="true"
+        android:onClick="showmaze"
+        android:text="ToggleButton"
+        app:layout_constraintEnd_toStartOf="@+id/showsolutionplaying"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toEndOf="@+id/showwallsplaying"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/showsolutionplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        android:checked="true"
+        android:onClick="showsolution"
+        android:text="ToggleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/showmazetextplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Show full maze"
+        android:textColor="#FFED4A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/showsolutiontextplaying"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toEndOf="@+id/showwallplayiongtext"
+        app:layout_constraintTop_toBottomOf="@+id/showmazeplaying" />
+
+    <ImageView
+        android:id="@+id/frontsensor"
+        android:layout_width="57dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="36dp"
+        android:background="#00FF0A"
+        app:layout_constraintBottom_toTopOf="@+id/remainingenergytext"
+        app:layout_constraintEnd_toStartOf="@+id/backsensor"
+        app:layout_constraintHorizontal_bias="0.991"
+        app:layout_constraintStart_toEndOf="@+id/leftsensor"
+        app:srcCompat="?android:attr/alertDialogIcon" />
+
+    <TextView
+        android:id="@+id/sensoractivetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Sensors active status(L,R,F,B):"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/remainingenergytext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="180dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="12dp"
+        android:max="4"
+        android:min="0"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/sensoractivetext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        android:textAlignment="center"
+        android:textColor="#FFEB3B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Playbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#FF0000"
+        android:contentDescription="play"
+        android:onClick="playanimation"
+        app:layout_constraintBottom_toTopOf="@+id/sensoractivetext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <ImageButton
+        android:id="@+id/Pausebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#00FF0A"
+        android:contentDescription="pause"
+        android:onClick="pauseanimation"
+        app:layout_constraintBottom_toTopOf="@+id/sensoractivetext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_pause" />
+
+    <edu.wm.cs.cs301.brukeamare.gui.MazePanel1
+        android:id="@+id/damazepanelanimation"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="48dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showmazetextplaying"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

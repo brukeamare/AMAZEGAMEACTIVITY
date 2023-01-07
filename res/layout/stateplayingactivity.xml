@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/stateplayingactivity">
+
+
+    <ImageView
+        android:id="@+id/imageanimation2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="1.75"
+        android:scaleY="1.75"
+        android:src="@drawable/db83904429a5c856b537d47dbc43df8d"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/rightbuttonmanual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="rightbutton"
+        android:rotation="180"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/jumpbutton"
+        app:srcCompat="@android:drawable/ic_media_rew"
+        app:tint="#FFEB3B" />
+
+    <ImageButton
+        android:id="@+id/forwardbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="forwardbutton"
+        android:rotation="90"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/damazepanelmanual"
+        app:srcCompat="@android:drawable/ic_media_rew"
+        app:tint="#FFEB3B" />
+
+    <TextView
+        android:id="@+id/showsolutiontextplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Show Solution"
+        android:textColor="#FFEB3B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showsolutionplaying" />
+
+    <TextView
+        android:id="@+id/showwallplayiongtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Show walls"
+        android:textColor="#FFEB3B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showwallsplaying" />
+
+    <ToggleButton
+        android:id="@+id/showwallsplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:onClick="showwall"
+        android:text="ToggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/showmazeplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="44dp"
+        android:onClick="showmaze"
+        android:text="ToggleButton"
+        app:layout_constraintEnd_toStartOf="@+id/showsolutionplaying"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toEndOf="@+id/showwallsplaying"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/showsolutionplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="showsolution"
+        android:text="ToggleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/showmazetextplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Show full maze"
+        android:textColor="#FFED4A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/showsolutiontextplaying"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/showwallplayiongtext"
+        app:layout_constraintTop_toBottomOf="@+id/showmazeplaying" />
+
+    <ImageButton
+        android:id="@+id/leftbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="leftbutton"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/jumpbutton"
+        app:srcCompat="@android:drawable/ic_media_rew"
+        app:tint="#FFEB3B" />
+
+    <Button
+        android:id="@+id/Go2losing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:onClick="Shortcut"
+        android:text="shortcut"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/jumpbutton"
+        android:layout_width="92dp"
+        android:layout_height="76dp"
+        android:background="#00FFEB3B"
+        android:foregroundTint="#000000"
+        android:onClick="jumpbutton"
+        android:outlineAmbientShadowColor="#050503"
+        android:outlineSpotShadowColor="#000000"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forwardbutton"
+        app:srcCompat="@android:drawable/ic_menu_compass"
+        app:tint="#00BCD4" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="zoomin"
+        android:tint="#8FFFEB3B"
+        app:layout_constraintEnd_toStartOf="@+id/damazepanelmanual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showwallplayiongtext"
+        app:srcCompat="@android:drawable/btn_plus"
+        tools:ignore="UseAppTint" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="zoomout"
+        android:tint="#88FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showsolutiontextplaying"
+        app:srcCompat="@android:drawable/btn_minus"
+        tools:ignore="UseAppTint" />
+
+    <edu.wm.cs.cs301.brukeamare.gui.MazePanel1
+        android:id="@+id/damazepanelmanual"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageanimation2"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/imageanimation2"
+        app:layout_constraintTop_toBottomOf="@+id/showmazetextplaying" />
+
+    <ImageButton
+        android:id="@+id/microphone"
+        android:layout_width="38dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleX="4"
+        android:scaleY="4"
+        android:onClick="micon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showmazetextplaying"
+        app:srcCompat="@android:drawable/presence_audio_online" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

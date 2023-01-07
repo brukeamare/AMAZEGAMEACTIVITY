@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AMazeByBrukeAmare</string>
+
+    <string-array name="generation_algorithms">
+        <item>DFS</item>
+        <item>Prim</item>
+        <item>Boruvka</item>
+    </string-array>
+    <string-array name="driver_algorithms">
+        <item>Select</item>
+        <item>Manual</item>
+        <item>WallFollower</item>
+        <item>Wizard</item>
+        <item>SmartWallFollower</item>
+        <item>SmartWizard</item>
+    </string-array>
+    <string-array name="sensors_activations">
+        <item>Select</item>
+        <item>Premium</item>
+        <item>Mediocre</item>
+        <item>Soso</item>
+        <item>Shaky</item>
+    </string-array>
+</resources>
